@@ -1,0 +1,17 @@
+<div class="container mx-auto py-10">
+    <h1 class="text-4xl font-bold font-poppins text-center mb-8">My Experience</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let experience of experiences" class="relative rounded-lg overflow-hidden shadow-lg">
+            <img [src]="experience.logo" alt="{{ experience.company }}" class="w-full h-64 object-cover">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-white text-center">
+                    <h2 class="text-2xl font-semibold font-poppins">{{ experience.company }}</h2>
+                    <p class="text-lg font-light mb-2">{{ experience.role }}</p>
+                    <p class="text-gray-300 text-sm">{{ experience.duration }}</p>
+                    <p class="text-gray-200">{{ experience.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
