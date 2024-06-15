@@ -1,14 +1,21 @@
 <app-nav></app-nav>
-<section class="m-0 p-0 h-screen overflow-hidden">
-    <div class="relative h-screen w-screen overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-blue-500"></div> <!-- Change bg-blue-500 to your desired color -->
-        <div class="relative z-10 flex items-center justify-center h-full">
-            <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold font-poppins">Arpita Sahoo</h1>
+<body class="m-0 p-0 h-screen overflow-hidden">
+    <section class="relative h-screen w-screen overflow-hidden">
+        <!-- Background image covering the entire section -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('../../assets/freestocks-BStW5kYXw4E-unsplash.jpg');"></div>
+        <!-- Black overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <!-- Text content with responsive padding and font sizes -->
+        <div class="relative z-10 flex flex-col items-start justify-center h-full pl-8 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40 2xl:pl-48 space-y-2" style="font-family: 'Poppins', sans-serif;">
+            <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light">Arpita Sahoo</h1>
+            <p class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light">Frontend Developer</p>
+            <p class="text-white text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-light">Turning ideas into interactive, beautiful web experiences.</p>
         </div>
-    </div>
-</section>
-<div class="container mx-auto">
-    <app-testimonial></app-testimonial>
+    </section>
+    
+</body>
+<div class="">
+    <app-skills></app-skills>
     <app-project></app-project>
     <app-experience></app-experience>
     <app-education></app-education>

@@ -16,4 +16,5 @@ export class NavComponent {
   toggleProfileMenu() {
     this.isProfileMenuOpen = !this.isProfileMenuOpen;
   }
+
 }
