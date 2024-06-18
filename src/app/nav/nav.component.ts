@@ -1,4 +1,5 @@
 import { Component, Renderer2 } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,6 +7,8 @@ import { Component, Renderer2 } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+
+  constructor(private renderer: Renderer2,private common:CommonService) { }
   isMobileMenuOpen = false;
   isProfileMenuOpen = false;
 
@@ -16,5 +19,6 @@ export class NavComponent {
   toggleProfileMenu() {
     this.isProfileMenuOpen = !this.isProfileMenuOpen;
   }
+
 
 }
