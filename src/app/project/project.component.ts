@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonService } from '../common.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ProjectDetailComponent } from '../dilog/project-detail/project-detail.component';
 
 @Component({
   selector: 'app-project',
@@ -36,4 +38,14 @@ export class ProjectComponent implements OnInit {
     },
     // Add more projects as needed
   ];
+
+  readonly dialog = inject(MatDialog);
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ProjectDetailComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }

@@ -17,6 +17,9 @@ import { EducationComponent } from './education/education.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material/material.module';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { ProjectDetailComponent } from './dilog/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +34,17 @@ import { HttpClientModule } from '@angular/common/http';
     ExperienceComponent,
     EducationComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    ScrollToTopComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
