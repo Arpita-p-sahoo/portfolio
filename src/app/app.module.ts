@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { ProjectDetailComponent } from './dilog/project-detail/project-detail.component';
+import { ExpComponent } from './dilog/exp/exp.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProjectDetailComponent } from './dilog/project-detail/project-detail.co
     FooterComponent,
     ContactComponent,
     ScrollToTopComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    ExpComponent
   ],
   imports: [
     BrowserModule,

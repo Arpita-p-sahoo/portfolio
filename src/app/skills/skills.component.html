@@ -1,75 +1,12 @@
-
-
-<body class="btext-white" >
-    <div class="container mx-auto py-10 sm:px-6 lg:px-8"> <!-- Added padding for small and large screens -->
-        <h1 class="text-4xl font-bold font-poppins text-center mb-8">My Skills</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
-            <!-- Your skill cards -->
-             <!-- HTML5 -->
-             <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">HTML5</h2>
-            </div>
-            <!-- CSS3 -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">CSS3</h2>
-            </div>
-            <!-- JavaScript -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">JavaScript</h2>
-            </div>
-            <!-- Angular -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" alt="Angular" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">Angular</h2>
-            </div>
-            <!-- Node.js -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt="Node.js" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">Node.js</h2>
-            </div>
-            <!-- MongoDB -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" alt="MongoDB" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">MongoDB</h2>
-            </div>
-            <!-- Git -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg" alt="Git" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">Git</h2>
-            </div>
-            <!-- Tailwind CSS -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhoXisDruJMDAq3Ltd-wuaMW2lGxck9wAKw&s" alt="Tailwind CSS" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">Tailwind CSS</h2>
-            </div>
-            <!-- Bootstrap -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">Bootstrap</h2>
-            </div>
-            <!-- Express.js -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">Express.js</h2>
-            </div>
-            <!-- GitLab -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-plain.svg" alt="GitLab" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">GitLab</h2>
-            </div>
-            <!-- SVN -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/subversion/subversion-original.svg" alt="SVN" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold font-poppins text-white">SVN</h2>
-            </div>
-            <!-- Firebase -->
-            <div class="bg-gray-800 p-6 rounded-lg shadow-md flex items-center">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-12 h-12 mr-4">
-                <h2 class="text-2xl font-semibold  font-poppins text-white">Firebase</h2>
-            </div>
+<div class="container mx-auto py-10 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold font-poppins text-center mb-8">My Skills</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+        <!-- HTML5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex items-center b" *ngFor="let skill of Skills">
+            <img [src]="skill.icon" alt="HTML5"
+                class="w-16 h-16 mr-4">
+            <h2 class="text-2xl font-semibold font-poppins">{{skill.name}}</h2>
         </div>
+       
     </div>
-</body>
+</div>
