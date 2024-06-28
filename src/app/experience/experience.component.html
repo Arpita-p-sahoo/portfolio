@@ -1,4 +1,4 @@
-<div class="container mx-auto py-10 sm:px-6 lg:px-8 m">
+<div class="container mx-auto py-10 sm:px-6 lg:px-8 p-8 m">
     <h1 class="text-4xl font-bold font-poppins text-center mb-8">My Experience</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <div *ngFor="let experience of experiences" class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:shadow-xl transition-shadow duration-300">
@@ -11,8 +11,8 @@
         </div>
         <p class="text-gray-300 mb-4"><span class="font-semibold text-white">Duration:</span> {{experience.duration}}</p>
         <p class="text-gray-300">{{experience.description}}</p>
-        <div class="mt-4">
-          <button (click)="openDialog()" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors duration-300">Learn More</button>
+        <div class="mt-4 ">
+          <button (click)="openDialog()" class="mx-auto text-white py-2 px-4 rounded hover:underline transition-colors duration-300">Know More</button>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
     <h1 class="text-4xl font-bold font-poppins text-center mb-8">My Skills</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
         <!-- HTML5 -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center b" *ngFor="let skill of Skills">
+        <div class="bg-white text-black p-6 rounded-lg shadow-md flex items-center b" *ngFor="let skill of Skills">
             <img [src]="skill.icon" alt="HTML5"
                 class="w-16 h-16 mr-4">
             <h2 class="text-2xl font-semibold font-poppins">{{skill.name}}</h2>
