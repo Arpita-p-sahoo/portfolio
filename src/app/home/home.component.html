@@ -1,14 +1,14 @@
 <body class="m-0 p-0 h-screen overflow-hidden">
     <section class="relative h-screen w-screen overflow-hidden">
-        <!-- Background color covering the entire section -->
-        <div class="absolute inset-0 bg-black"></div>
+        <!-- Background image covering the entire section -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://ai.google.dev/images/dots.jpg');"></div>
         <!-- Black overlay for better text contrast -->
-        <div class="absolute inset-0 opacity-50"></div>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
         <!-- Text content with responsive padding and font sizes -->
         <div class="relative z-10 flex flex-col items-start justify-center h-full pl-8 sm:pl-16 md:pl-24 lg:pl-32 xl:pl-40 2xl:pl-48 space-y-2" style="font-family: 'Poppins', sans-serif;">
             <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light">Arpita Sahoo</h1>
-            <p class=" text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-light">Frontend Developer</p>
-            <p class=" text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-light">Turning ideas into interactive, beautiful web experiences.</p>
+            <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-light">Frontend Developer</p>
+            <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-light">Turning ideas into interactive, beautiful web experiences.</p>
             <!-- Social icons -->
             <div class="flex space-x-4 mt-4">
                 <!-- GitHub SVG -->
@@ -37,8 +37,9 @@
         </div>
     </section>
     
+    
 </body>
-<div class="bg-black text-white">
+<div class=" bg-cover bg-center" style="background-image: url('../../assets/favicon.jpg')">
     <app-skills></app-skills>
     <!-- <app-project></app-project> -->
     <app-experience></app-experience>

@@ -1,7 +1,7 @@
-<div class="container mx-auto py-10">
-    <h1 class="text-4xl font-bold font-poppins text-center mb-8">My Education</h1>
+ <div class="container mx-auto py-10">
+    <h1 class="text-4xl font-bold font-poppins text-center mb-8 text-white">My Education</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
-      <div *ngFor="let education of educations" class="bg-white text-black rounded-lg shadow-lg overflow-hidden">
+      <!-- <div *ngFor="let education of educations" class="bg-white text-black rounded-lg shadow-lg overflow-hidden">
         <img [src]="education.image" alt="{{ education.institution }}" class="w-full h-64 object-cover">
         <div class="p-6">
           <h2 class="text-2xl font-semibold font-poppins mb-2">{{ education.institution }}</h2>
@@ -9,7 +9,18 @@
           <p class="text-gray-600">{{ education.duration }}</p>
           <p>{{ education.description }}</p>
         </div>
+      </div> -->
+      <div class=" p-6 rounded-lg shadow-md flex items-center border border-gray-300 hover:border-blue-500 duration-300">
+        <img src="https://via.placeholder.com/80" alt="University Logo" class="w-16 h-16 rounded-full mr-4">
+        <div>
+          <h2 class="text-xl font-semibold mb-2 text-gray-400 hover:text-blue-500">Bachelor of Science in Computer Science</h2>
+          <p class="text-sm text-gray-400 mb-2">University of Example</p>
+          <p class="text-sm text-gray-400">August 20XX - May 20XX</p>
+        </div>
       </div>
+      
     </div>
   </div>
-  
+
+
+   

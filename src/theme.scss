@@ -1,0 +1,39 @@
+// theme.scss
+
+$light-theme: (
+  primary-color: #ffffff,
+  secondary-color: #f8f9fa,
+  text-color: #000000,
+  // other variables...
+);
+
+$dark-theme: (
+  primary-color: #343a40,
+  secondary-color: #495057,
+  text-color: #ffffff,
+  // other variables...
+);
+
+@mixin apply-theme($theme) {
+  $primary-color: map-get($theme, primary-color);
+  $secondary-color: map-get($theme, secondary-color);
+  $text-color: map-get($theme, text-color);
+
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --text-color: #{$text-color};
+
+  background-color: $primary-color;
+  color: $text-color;
+
+  // Apply more variables as needed
+}
+
+
+.light-theme {
+  @include apply-theme($light-theme);
+}
+
+.dark-theme {
+  @include apply-theme($dark-theme);
+}

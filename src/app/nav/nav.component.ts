@@ -1,5 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { CommonService } from '../common.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,8 @@ import { CommonService } from '../common.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-
+  currentTheme!: string;
+  themeSubscription!: Subscription;
   constructor(private renderer: Renderer2,private common:CommonService) { }
   isMobileMenuOpen = false;
   isProfileMenuOpen = false;
@@ -20,5 +22,9 @@ export class NavComponent {
     this.isProfileMenuOpen = !this.isProfileMenuOpen;
   }
 
+  toggleTheme() {
+    const newTheme = this.currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
+    this.common.setTheme(newTheme);
+  }
 
 }

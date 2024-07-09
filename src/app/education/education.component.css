@@ -1,0 +1,10 @@
+.card {
+    background: url('https://via.placeholder.com/400x200') no-repeat center center;
+    background-size: cover;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .card:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/400x200') no-repeat center center;
+    background-size: cover;
+  }
