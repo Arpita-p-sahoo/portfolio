@@ -39,6 +39,28 @@ export class ProjectComponent implements OnInit {
     // Add more projects as needed
   ];
 
+  Talks = [
+    {
+      topic:'GitHub introduction and Live Session',
+      location:'Silicon College',
+      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde a minima voluptas, adipisci quos alias quo ea iste quis error id amet perferendis provident consectetur? Aperiam blanditiis quasi excepturi.',
+      mode:'Online'
+    },
+    {
+      topic:'Angular Introduction and Framework benifits on current tech era',
+      location:'CV Raman University',
+      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde a minima voluptas, adipisci quos alias quo ea iste quis error id amet perferendis provident consectetur? Aperiam blanditiis quasi excepturi.',
+      mode:'Offline'
+    },
+    {
+      topic:'GitHub introduction and live session',
+      location:'Trident College',
+      description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde a minima voluptas, adipisci quos alias quo ea iste quis error id amet perferendis provident consectetur? Aperiam blanditiis quasi excepturi.',
+      mode:'Offline'
+    },
+   
+  ]
+
   readonly dialog = inject(MatDialog);
 
   openDialog() {
@@ -48,4 +70,5 @@ export class ProjectComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+ 
 }
