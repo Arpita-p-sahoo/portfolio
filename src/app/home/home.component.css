@@ -1,50 +1,5 @@
 .bg-fixed {
-  background-attachment: fixed;
-}
-
-/* Define the keyframes for the multicolor border animation */
-@keyframes borderAnimation {
-  0% {
-    border-color: #ff0000;
-    /* Red */
+    background-attachment: fixed;
   }
-
-  25% {
-    border-color: #ff00ff;
-    /* Magenta */
-  }
-
-  50% {
-    border-color: #0000ff;
-    /* Blue */
-  }
-
-  75% {
-    border-color: #00ff00;
-    /* Green */
-  }
-
-  100% {
-    border-color: #ff0000;
-    /* Red */
-  }
-}
-
-/* Apply the animation on hover */
-button:hover .animate-border {
-  animation: borderAnimation 2s linear infinite;
-}
-
-/* Style the animated border */
-.animate-border {
-  border-width: 2px;
-  border-style: solid;
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  z-index: -1;
-  /* Ensure the animated border stays behind the button text */
-  transition: all 0.3s ease-in-out;
-}
+  
+  

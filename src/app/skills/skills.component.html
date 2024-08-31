@@ -1,10 +1,10 @@
 <div class="container mx-auto py-10 sm:px-6 lg:px-8">
-    <h1 class="text-4xl font-bold font-poppins text-center mb-8 text-white">My Skills</h1>
+    <h1 class="text-4xl font-bold font-poppins text-center mb-8 ">My Skills</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
         <!-- HTML5 -->
-        <div class="text-white p-6 rounded-lg shadow-md flex items-center bg-[#060606] border border-gray-600 hover:border-2 hover:border-[#1E6FE6] hover:bg-[url('/portfolio/src/assets/favicon.jpg')] duration-300" *ngFor="let skill of Skills">
+        <div class="text-white p-6 rounded-lg shadow-md flex items-center border" *ngFor="let skill of Skills">
             <img [src]="skill.icon" alt="HTML5" class="w-16 h-16 mr-4">
-            <h2 class="text-2xl font-semibold font-poppins">{{skill.name}}</h2>
+            <h2 class="text-2xl font-semibold font-poppins text-black">{{skill.name}}</h2>
           </div>
           
     </div>

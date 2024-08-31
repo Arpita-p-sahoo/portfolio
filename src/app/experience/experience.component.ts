@@ -12,17 +12,21 @@ export class ExperienceComponent implements OnInit {
 
   experiences: Experience[] = [
     {
-      company: 'Vis Networks',
-      role: 'Software Developer',
-      duration: 'July 2022 - Present',
-      description: 'Developed web applications using Angular and Node.js.',
-      logo: '../../assets/download.jpeg'},
+      "company": "Vis Networks",
+      "role": "Software Developer",
+      "duration": "July 2022 - Present",
+      "description": "Developed web applications using Angular and Node.js.",
+      "logo": "../../assets/download.jpeg",
+      "technologies": ["Angular", "Node.js", "JavaScript", "HTML", "CSS"]
+    },
+    
     {
       company: 'Zebaq web',
       role: 'Frontend Developer',
       duration: 'March 2022 - May 2022',
       description: 'Worked on enhancing user interfaces with React and Redux.',
-      logo: '../../assets/zebaq.jpeg'
+      logo: '../../assets/zebaq.jpeg',
+      "technologies": ["Wordpress", "JavaScript", "HTML", "CSS"]
     },
     
   ];

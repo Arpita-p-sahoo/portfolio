@@ -4,4 +4,6 @@ export interface Experience {
   duration: string;
   description: string;
   logo: string;
+  technologies?: string[]; 
 }
+
