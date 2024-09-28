@@ -1,22 +1,23 @@
 <div class="container mx-auto py-10 sm:px-6 lg:px-8 p-8 m">
   <h1 class="text-4xl font-bold font-poppins text-center mb-8 ">My Experience</h1>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <ng-container *ngFor="let item of experiences">
-          <div class="text-white p-6 rounded-lg shadow-md flex flex-col border shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-lg to-gray-800">
-              <div class="flex items-center mb-4">
-                  <img [src]="item.logo" alt="Company Logo" class="w-16 h-16 mr-4 border shadow-md rounded-full transition-transform duration-300 hover:scale-110">
-                  <div>
-                      <h2 class="text-2xl text-dark font-semibold font-poppins mb-1" style="color: black;">{{item.company}}</h2>
-                      <p class="text-gray-400 text-sm">{{item.duration}}</p>
-                  </div>
-              </div>
-              <p class="text-gray-400 mb-4">{{item.description}}</p>
-              <div class="mt-auto">
-                  <div class="flex flex-wrap gap-2">
-                      <span class="inline-block bg-blue-600 hover:bg-blue-800 rounded-full px-3 py-1 text-sm font-semibold transition-colors duration-300" *ngFor="let tech of item.technologies">{{tech}}</span>
-                  </div>
-              </div>
+    <ng-container *ngFor="let item of experiences">
+        <div class="text-black p-4 rounded-lg shadow-sm flex flex-col border transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <div class="flex items-center mb-3">
+            <img [src]="item.logo" alt="Company Logo" class="w-12 h-12 mr-3 rounded-full transition-transform duration-300 hover:scale-110">
+            <div>
+              <h2 class="text-lg font-medium mb-1">{{item.company}}</h2>
+              <p class="text-gray-500 text-xs">{{item.duration}}</p>
+            </div>
           </div>
+          <p class="text-gray-600 text-sm mb-3">{{item.description}}</p>
+          <div class="mt-auto">
+            <div class="flex flex-wrap gap-1">
+              <span class="inline-block bg-blue-100 hover:bg-blue-200 rounded-full px-2 py-1 text-xs font-medium transition-colors duration-300" *ngFor="let tech of item.technologies">{{tech}}</span>
+            </div>
+          </div>
+        </div>
       </ng-container>
+      
   </div>
 </div>

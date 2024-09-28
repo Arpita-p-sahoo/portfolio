@@ -34,7 +34,7 @@ export class ProjectComponent implements OnInit {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harta.'
     },
     {
-      image: 'assets/Black Gold Minimalist Jewelry Logo.png',
+      image: 'assets/Pink Minimal Typography Logo .png',
       title: this.project.techHub,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harta.'
     },
