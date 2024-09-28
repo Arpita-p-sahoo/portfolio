@@ -2,8 +2,8 @@
     <h1 class="text-4xl font-bold text-center my-8">My Projects</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
         <div *ngFor="let item of projects"
-            class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-            (click)="openDialog()">
+            class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden" style="box-shadow: rgba(0,0,0,0.07) 0px 16px 24px 0px rgba(0.0,0,0.1) 0px 2px 6px 0px ,rgba(0,0,0,0.1) 0px 0px 1px 0px;"
+            (click)="openDialog(item.title)">
             <img class="w-full h-48 object-cover transform transition-transform duration-300 hover:scale-110"
                 [src]="item.image" alt="Project image">
             <div class="p-6 bg-gradient-to-b from-gray-50 to-gray-100">
@@ -48,7 +48,7 @@
                     
                     <!-- Footer Link -->
                     <div class="bg-gray-100 p-4">
-                        <a href="{{blog.link || '#'}}" class="text-blue-500 hover:underline hover:text-blue-700 transition-colors duration-300 block text-center" target="_blank">
+                        <a href="{{blog.link ?? '#'}}" class="text-blue-500 hover:underline hover:text-blue-700 transition-colors duration-300 block text-center" target="_blank">
                             Visit Link
                         </a>
                     </div>

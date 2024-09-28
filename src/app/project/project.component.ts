@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonService } from '../common.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectDetailComponent } from '../dilog/project-detail/project-detail.component';
+import { Project } from '../project';
 
 @Component({
   selector: 'app-project',
@@ -10,6 +11,7 @@ import { ProjectDetailComponent } from '../dilog/project-detail/project-detail.c
 })
 export class ProjectComponent implements OnInit {
   data: any;
+  project = Project;
   constructor(private commonSvc: CommonService) { }
 
   
@@ -28,12 +30,12 @@ export class ProjectComponent implements OnInit {
   projects = [
     {
       image: 'assets/WhatsApp Image 2024-06-04 at 21.55.00.jpeg',
-      title: 'Convobuddy',
+      title: this.project.ConvoBuddy,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harta.'
     },
     {
       image: 'assets/Black Gold Minimalist Jewelry Logo.png',
-      title: 'Gehna',
+      title: this.project.techHub,
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harta.'
     },
     // Add more projects as needed
@@ -63,12 +65,10 @@ export class ProjectComponent implements OnInit {
 
   readonly dialog = inject(MatDialog);
 
-  openDialog() {
+  openDialog(projectName:string) {
+    this.commonSvc.SetProjectDetail(projectName);
     const dialogRef = this.dialog.open(ProjectDetailComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
  
 }
