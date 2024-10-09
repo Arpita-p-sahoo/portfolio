@@ -1,8 +1,8 @@
 <div class="container mx-auto py-10 sm:px-6 lg:px-8 p-8 m">
   <h1 class="text-4xl font-bold font-poppins text-center mb-8 ">My Experience</h1>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <ng-container *ngFor="let item of experiences">
-        <div class="text-black p-4 rounded-lg shadow-sm flex flex-col border transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+    <ng-container *ngFor="let item of experiences" >
+        <div (click)="openDialog(item.company)" class="text-black p-4 rounded-lg shadow-sm flex flex-col border transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
           <div class="flex items-center mb-3">
             <img [src]="item.logo" alt="Company Logo" class="w-12 h-12 mr-3 rounded-full transition-transform duration-300 hover:scale-110">
             <div>

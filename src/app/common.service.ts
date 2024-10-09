@@ -25,6 +25,12 @@ export class CommonService {
     this.themeSubject.next(theme);
   }
 
+  public CompanyDetail = {
+    companyname:'',
+    duration:'',
+    skillUsed:[''],
+    achievement:['']
+  }
 
   public ProjectDetail = {
     ProectName: '',
@@ -58,6 +64,60 @@ export class CommonService {
   public techHubDescription = {
     name: ' The techHub',
     description: 'The description about tech hub'
+  }
+
+  public VIS = {
+    name: 'Vis Networks',
+    description: 'The description about vis networks',
+    duration: 'July 2022 - Present',
+    technologies: ['Angular', 'Node.js', 'JavaScript', 'HTML', 'CSS'],
+    projects: [
+      'lorem ipsum',
+      'lorem ipsum',  
+      'lorem ipsum',
+    ],
+    personaldevelopment:'lorem ipsum',
+    personaldevelopment2:'lorem ipsum',
+    personaldevelopment3:'lorem ipsum',
+
+
+  }
+  public Zebaq = {
+    name: 'Zebaq web',
+    description: 'The description about vis networks',
+    duration: 'July 2022 - Present',
+    technologies: ['Angular', 'Node.js', 'JavaScript', 'HTML', 'CSS'],
+    projects: [
+      'lorem ipsum',
+      'lorem ipsum',  
+      'lorem ipsum',
+    ],
+    personaldevelopment:'lorem ipsum',
+    personaldevelopment2:'lorem ipsum',
+    personaldevelopment3:'lorem ipsum',
+
+
+  }
+
+  public setExperience = (name: string) => {
+    if (name === this.VIS.name) {
+      this.CompanyDetail.companyname = name;
+      this.CompanyDetail.duration=this.VIS.duration;
+      let achv:any = this.VIS.personaldevelopment2;
+      this.CompanyDetail.achievement.push(achv);
+
+    }
+    if (name === this.Zebaq.name) {
+      this.CompanyDetail.companyname = name;
+      this.CompanyDetail.duration='0 yrs';
+      let achv:any = 'usdhkjshdjk';
+      this.CompanyDetail.achievement.push(achv);
+
+    }
+  }
+
+  public getExperience = (name: string) => {
+    return this.CompanyDetail;
   }
 
 }

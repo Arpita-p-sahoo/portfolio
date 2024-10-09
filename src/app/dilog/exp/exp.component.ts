@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from 'src/app/common.service';
 
 @Component({
   selector: 'app-exp',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./exp.component.css']
 })
 export class ExpComponent {
-
+  constructor(public common:CommonService) { }
 }

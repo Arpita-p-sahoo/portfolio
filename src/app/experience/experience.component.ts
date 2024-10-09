@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Experience } from './experience.module';
 import { MatDialog } from '@angular/material/dialog';
 import { ExpComponent } from '../dilog/exp/exp.component';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,7 +10,6 @@ import { ExpComponent } from '../dilog/exp/exp.component';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-
   experiences: Experience[] = [
     {
       "company": "Vis Networks",
@@ -32,9 +32,11 @@ export class ExperienceComponent implements OnInit {
   ];
 
   readonly dialog = inject(MatDialog);
-  constructor() { }
+  constructor(public common:CommonService){}
 
-  openDialog() {
+
+  openDialog(name:any) {
+    this.common.setExperience(name);
     this.dialog.open(ExpComponent);
   }
 
