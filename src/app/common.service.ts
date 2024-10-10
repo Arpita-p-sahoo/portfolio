@@ -120,4 +120,13 @@ export class CommonService {
     return this.CompanyDetail;
   }
 
+  public  downloaResume() {
+    const fileUrl = '../assets/Arpita_Sahoo (2).pdf'; // Path to your PDF in the assets folder
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = 'Arpita_Sahoo.pdf'; // Name the downloaded file
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
 }
